@@ -1,0 +1,65 @@
+{
+	"_version": "1.7.0",
+	"sap.app": {
+		"id": "${project.artifactId}",
+		"type": "application",
+		"i18n": "lang/i18n.properties",
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": false,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_belize"
+		]
+	},
+	"sap.ui5": {
+		"rootView": "openui5.example.App",
+		"dependencies": {
+			"minUI5Version": "1.30",
+			"libs": {
+				"sap.m": {}
+			}
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "openui5.example",
+				"controlId": "main",
+				"controlAggregation": "pages"
+			},
+			"routes": [{
+					"pattern": "",
+					"name": "list",
+					"target": "list"
+				}
+			],
+			"targets": {
+				"list": {
+					"viewName": "pages.List"
+				}
+			}
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "openui5.example.lang.i18n"
+				}
+			},
+			"": {
+				"type": "sap.ui.model.json.JSONModel",
+				"settings": ["http://openui5.org/OpenUI5Downloads.json"]
+			}
+		}
+	}
+}

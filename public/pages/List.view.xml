@@ -1,0 +1,47 @@
+<mvc:View
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout"
+	xmlns="sap.m"
+	displayBlock="true"
+	controllerName="openui5.example.pages.List"
+>
+	<Page
+		title="{i18n>CURRENT_OPENUI5_RELEASES}"
+		class="sapUiContentPadding"
+		showNavButton="false"
+	>
+		<content>
+			<List
+				items="{
+					path: '/'
+				}">
+				<ObjectListItem
+					title="{version}"
+					type="Active"
+					press="handlerListItem"
+				>
+					<firstStatus>
+						<ObjectStatus
+							text="{
+								parts : [{path: 'version'}, {path: 'beta'}],
+								formatter: '.statusText'
+							}"
+							state="{
+								parts : [{path: 'version'}, {path: 'beta'}],
+								formatter: '.statusState'
+							}" />
+					</firstStatus>
+					<attributes>
+						<ObjectAttribute text="{i18n>RELEASE_DATE} {date}"/>
+					</attributes>
+				</ObjectListItem>
+			</List>
+		</content>
+	</Page>
+</mvc:View>
+
+
+
+
+

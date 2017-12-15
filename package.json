@@ -1,0 +1,24 @@
+{
+  "name": "openui5-dist-example",
+  "version": "1.0.0",
+  "description": "How to use openui5-dist package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/norbertvolf/openui5-dist-example.git"
+  },
+  "author": "Norbert Volf",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/norbertvolf/openui5-dist-example/issues"
+  },
+  "homepage": "https://github.com/norbertvolf/openui5-dist-example#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "openui5-dist": "^1.50.7"
+  }
+}
